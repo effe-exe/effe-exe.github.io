@@ -103,8 +103,8 @@ h1, h2, h3 { margin: 0; font-family: var(--wd-font-display); color: var(--wd-tex
 }
 .btn-primary { background: var(--wd-primary); color: var(--wd-bg); }
 .btn-primary:hover { background: var(--wd-primary-light); color: var(--wd-bg); }
-.btn-soon { border: 1px solid var(--wd-border); background: var(--wd-surface); color: var(--wd-muted); }
-.btn-soon .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--wd-warning); flex: none; }
+.btn-quiet { border: 1px solid var(--wd-border); background: var(--wd-surface); color: var(--wd-text); }
+.btn-quiet:hover { border-color: var(--wd-dim); color: var(--wd-text); }
 .fine { margin-top: 16px; color: var(--wd-dim); font-size: 14px; }
 
 /* The illustration. */
@@ -218,10 +218,10 @@ kbd { padding: 1px 6px; border: 1px solid var(--wd-border); border-bottom-width:
       <h1 id="hero-title">Place the ward.<br><span class="soft">See the table.</span></h1>
       <p class="lede">Wardeye is a free browser extension for people watching <strong>Riftbound</strong> on Twitch. Point at a card on the table to see its name and image, live or on replay. It works from the video alone, on your computer: no video leaves it.</p>
       <div class="ctas">
-        <a class="btn btn-primary" href="https://github.com/effe-exe/Wardeye">View on GitHub <span aria-hidden="true">&#8599;</span></a>
-        <span class="btn btn-soon"><span class="dot" aria-hidden="true"></span>Chrome Web Store: in review</span>
+        <a class="btn btn-primary" href="https://chromewebstore.google.com/detail/wardeye/hjglackjofehdfecoeehbdmbobafbjhn">Add to Chrome <span aria-hidden="true">&#8599;</span></a>
+        <a class="btn btn-quiet" href="https://github.com/effe-exe/Wardeye">View on GitHub <span aria-hidden="true">&#8599;</span></a>
       </div>
-      <p class="fine">For desktop Chrome and Edge. The store link goes here as soon as the listing is live.</p>
+      <p class="fine">Free, from the Chrome Web Store, for desktop Chrome and Edge. In Edge, allow extensions from other stores when it asks.</p>
     </div>
   </section>
 
@@ -229,7 +229,7 @@ kbd { padding: 1px 6px; border: 1px solid var(--wd-border); border-bottom-width:
     <div class="stage-frame">
       <svg viewBox="0 0 1200 675" role="img" aria-labelledby="ill-title ill-desc">
         <title id="ill-title">Wardeye on a stream, illustrated</title>
-        <desc id="ill-desc">A card table seen from above, as a broadcast shows it. Every face-up card has a violet outline. The pointer rests on one card, and a hover card beside it shows that card's picture, its name and the card lying under it. A badge in the corner reads: Wardeye, 15 cards named.</desc>
+        <desc id="ill-desc">A card table seen from above, as a broadcast shows it. Every face-up card is marked at its corners in violet. The pointer rests on one card, and a hover card beside it shows that card's picture, its name and the card lying under it. A badge in the corner reads: Wardeye, 15 cards named.</desc>
         <defs>
           <radialGradient id="mat" cx="0.45" cy="0.48" r="0.8">
             <stop offset="0" stop-color="#1c1a27"/>
@@ -254,8 +254,8 @@ kbd { padding: 1px 6px; border: 1px solid var(--wd-border); border-bottom-width:
             <rect x="9" y="90" width="64" height="4" rx="2" fill="#3a3a44"/>
             <rect x="9" y="99" width="54" height="4" rx="2" fill="#3a3a44"/>
           </g>
-          <g id="ring"><rect x="-4" y="-4" width="92" height="126" rx="9" fill="none" stroke="#8b7cf6" stroke-width="2" opacity="0.85"/></g>
-          <g id="ring-wide"><rect x="-4" y="-4" width="126" height="92" rx="9" fill="none" stroke="#8b7cf6" stroke-width="2" opacity="0.85"/></g>
+          <g id="ring"><path d="M-4,21.2L-4,-4L14.4,-4M69.6,-4L88,-4L88,21.2M88,96.8L88,122L69.6,122M14.4,122L-4,122L-4,96.8" fill="none" stroke="#8b7cf6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></g>
+          <g id="ring-wide"><path d="M-4,14.4L-4,-4L21.2,-4M96.8,-4L122,-4L122,14.4M122,69.6L122,88L96.8,88M21.2,88L-4,88L-4,69.6" fill="none" stroke="#8b7cf6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></g>
         </defs>
 
         <rect width="1200" height="675" fill="#0d0d0f"/>
@@ -322,7 +322,7 @@ kbd { padding: 1px 6px; border: 1px solid var(--wd-border); border-bottom-width:
         <rect x="40" y="651" width="640" height="4" rx="2" fill="#71717a"/>
       </svg>
     </div>
-    <figcaption>An illustration, not a screenshot: an outline on every card Wardeye has named, and the hover card of the one under the pointer, with the card lying under it.</figcaption>
+    <figcaption>An illustration, not a screenshot: corner marks on every card Wardeye has named, and the outline and hover card of the one under the pointer, with the card lying under it.</figcaption>
   </figure>
 
   <section class="section" id="how" aria-labelledby="how-title">
@@ -330,7 +330,7 @@ kbd { padding: 1px 6px; border: 1px solid var(--wd-border); border-bottom-width:
       <p class="eyebrow"><span class="num">01</span> &middot; How it works</p>
       <h2 id="how-title">Three steps. No setup.</h2>
       <ol class="grid" style="list-style: none; padding: 0; margin-bottom: 0;">
-        <li class="tile"><span class="step-num">1</span><h3>Place the ward</h3><p>Add Wardeye to Chrome or Edge from the Chrome Web Store.</p></li>
+        <li class="tile"><span class="step-num">1</span><h3>Place the ward</h3><p>Add Wardeye to Chrome or Edge from the <a href="https://chromewebstore.google.com/detail/wardeye/hjglackjofehdfecoeehbdmbobafbjhn">Chrome Web Store</a>.</p></li>
         <li class="tile"><span class="step-num">2</span><h3>Open a stream or replay</h3><p>Any Riftbound broadcast on Twitch, live or on replay. Theatre mode and fullscreen work too.</p></li>
         <li class="tile"><span class="step-num">3</span><h3>Point at a card</h3><p>Its image and name appear beside it, with the cards lying under it, such as gear on a unit.</p></li>
       </ol>
@@ -462,7 +462,7 @@ kbd { padding: 1px 6px; border: 1px solid var(--wd-border); border-bottom-width:
       <h2 id="faq-title">Questions, answered.</h2>
       <div class="faq">
         <details><summary>Which browsers does it work in?</summary><p>Desktop Chrome and Edge, version 137 or newer. A recent graphics chip (WebGPU) makes it fast; without one it runs on the processor, more slowly.</p></details>
-        <details><summary>Where do I get it?</summary><p>From the Chrome Web Store, where the first version is in review now. Edge installs it from the same page. The link goes on this page as soon as the listing is live.</p></details>
+        <details><summary>Where do I get it?</summary><p>From the <a href="https://chromewebstore.google.com/detail/wardeye/hjglackjofehdfecoeehbdmbobafbjhn">Chrome Web Store</a>, for free. Edge installs it from the same page: allow extensions from other stores when Edge asks, then click Get.</p></details>
         <details><summary>How much does it cost?</summary><p>Nothing. There are no ads, no paid tiers and no account.</p></details>
         <details><summary>Does it work on YouTube?</summary><p>Not yet. Twitch comes first; YouTube is on the <a href="https://github.com/effe-exe/Wardeye/blob/main/docs/ROADMAP.md">roadmap</a>.</p></details>
         <details><summary>Is Wardeye made by Riot Games?</summary><p>No. Wardeye is a fan project. Riot Games does not endorse or sponsor it: see the notice at the bottom of this page.</p></details>
@@ -479,6 +479,7 @@ kbd { padding: 1px 6px; border: 1px solid var(--wd-border); border-bottom-width:
     <div class="foot-row">
       <div class="foot-brand"><img src="lockup.svg" alt="Wardeye" width="121" height="32"><span>Place the ward. See the table.</span></div>
       <nav class="foot-links" aria-label="Links">
+        <a href="https://chromewebstore.google.com/detail/wardeye/hjglackjofehdfecoeehbdmbobafbjhn">Chrome Web Store</a>
         <a href="https://github.com/effe-exe/Wardeye">GitHub</a>
         <a href="https://github.com/effe-exe/Wardeye/blob/main/docs/PRIVACY.md">Privacy policy</a>
         <a href="https://github.com/effe-exe/Wardeye/blob/main/LICENSE">Licence (AGPL-3.0)</a>
