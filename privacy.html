@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wardeye &middot; Privacy policy</title>
+<meta name="description" content="Wardeye's privacy policy: it collects nothing, and no video leaves your computer.">
+<link rel="canonical" href="https://effe-exe.github.io/privacy.html">
+<link rel="icon" href="mark.svg" type="image/svg+xml">
+<meta name="theme-color" content="#0A0A0B">
+<meta name="color-scheme" content="dark">
+<style>
+/* The privacy policy of github.com/effe-exe/Wardeye (docs/PRIVACY.md), as a page. No scripts and no trackers. */
+@font-face { font-family: 'Space Grotesk'; font-weight: 300 700; font-display: swap; src: url(fonts/SpaceGrotesk-latin.woff2) format('woff2'); }
+@font-face { font-family: 'Inter'; font-weight: 100 900; font-display: swap; src: url(fonts/Inter-latin.woff2) format('woff2'); }
+@font-face { font-family: 'JetBrains Mono'; font-weight: 100 800; font-display: swap; src: url(fonts/JetBrainsMono-latin.woff2) format('woff2'); }
+:root { --bg: #0a0a0b; --surface: #121214; --border: #2a2a30; --text: #f4f4f5; --muted: #a1a1aa; --dim: #71717a; --primary-light: #a99bff; --accent: #c4b5fd; --gutter: 16px; }
+@media (min-width: 720px) { :root { --gutter: 32px; } }
+*, *::before, *::after { box-sizing: border-box; }
+html { background: var(--bg); color-scheme: dark; -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--bg); color: var(--muted); font: 400 16px/1.7 'Inter', ui-sans-serif, system-ui, sans-serif; -webkit-font-smoothing: antialiased; overflow-wrap: break-word; }
+.wrap { max-width: 760px; margin: 0 auto; padding: 0 var(--gutter); }
+header { border-bottom: 1px solid var(--border); }
+header .wrap { display: flex; align-items: center; height: 64px; }
+header img { display: block; height: 28px; width: auto; }
+main { padding: 48px 0 64px; }
+h1, h2 { font-family: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif; color: var(--text); text-wrap: balance; }
+h1 { margin: 0 0 20px; font-size: clamp(32px, 6vw, 44px); line-height: 1.1; letter-spacing: -0.02em; }
+h2 { margin: 40px 0 12px; font-size: 22px; line-height: 1.3; }
+p, ul { margin: 0 0 14px; }
+ul { padding-left: 22px; }
+li { margin: 6px 0; }
+strong { color: var(--text); font-weight: 600; }
+a { color: var(--primary-light); text-underline-offset: 3px; }
+a:hover { color: var(--accent); }
+code { font-family: 'JetBrains Mono', ui-monospace, Menlo, Consolas, monospace; font-size: 0.88em; color: var(--text); background: var(--surface); border: 1px solid var(--border); border-radius: 4px; padding: 1px 5px; }
+.table { overflow-x: auto; margin: 0 0 14px; }
+table { width: 100%; border-collapse: collapse; font-size: 15px; }
+th, td { text-align: left; vertical-align: top; padding: 10px 12px; border-bottom: 1px solid var(--border); }
+th { color: var(--text); font-weight: 600; }
+footer { border-top: 1px solid var(--border); padding: 28px 0 40px; color: var(--dim); font-size: 13px; line-height: 1.6; }
+footer p { margin: 0 0 8px; }
+</style>
+</head>
+<body>
+<header><div class="wrap"><a href="./" aria-label="Wardeye home"><img src="lockup.svg" alt="Wardeye" width="121" height="32"></a></div></header>
+<main><div class="wrap">
+<h1>Wardeye privacy policy</h1>
+<p><strong>Last updated: 30 September 2026.</strong> Wardeye is a free, open-source browser extension, a community project by Federico Vietti. This policy covers the extension as published on the Chrome Web Store. Its code is public, so everything below can be checked in <a href="https://github.com/effe-exe/Wardeye/tree/main/apps/extension">apps/extension</a>.</p>
+<h2>In short</h2>
+<p>Wardeye collects nothing. It has no account, no server, no analytics, no ads and no tracking. It reads the Twitch video you are watching on your own computer and draws its results on the player. The only thing it loads from the internet is card data from Riot Games' public card gallery.</p>
+<h2>What it reads</h2>
+<ul><li><strong>Only on twitch.tv.</strong> The extension runs on <code>https://www.twitch.tv/*</code> pages and nowhere else.</li><li><strong>The frames of the video you are watching</strong>, while it plays, to find and name the cards on the table. Only the table camera's area is analysed: hand cams, face-down cards and the broadcast's side graphics are never processed. When the video is paused, or you turn Wardeye off (its power button, its toolbar button, or Alt+R, Option+R on a Mac), nothing is read.</li><li><strong>The video's address on twitch.tv</strong> (for example <code>/videos/12345</code>), so that each video gets its own board. It stays in the extension.</li></ul>
+<h2>Where it is processed</h2>
+<p>In the extension itself, in your browser, on your graphics chip or processor. The recognition models ship inside the extension. No frame ever leaves your computer, and neither does what Wardeye learns from one, with one exception: to show a card's picture, it asks Riot's image server for that card's image, which tells Riot which card is being shown (below).</p>
+<h2>What it loads from the internet</h2>
+<p>Card names, types and images, from Riot Games' public card gallery:</p>
+<ul><li><strong>The card list</strong>, from <code>content.publishing.riotgames.com</code>, when you open a page on twitch.tv, whether or not a video plays. It is loaded again when the extension restarts its engine, for example after five minutes without a video.</li><li><strong>A card's image</strong>, from <code>cmsassets.rgpub.io</code>, when the overlay shows that card.</li></ul>
+<p>These are ordinary web requests, like visiting the gallery. Riot's servers see your IP address, your browser, and that the request comes from the Wardeye extension (the browser names the extension as the request's origin). A request for a card's image also tells them which card is being shown. The requests carry no cookies and no referrer. Riot's own privacy policy applies to them. Wardeye sends nothing else, to Riot or to anyone.</p>
+<h2>What it stores</h2>
+<p>No cookies, no history of what you watched, nothing about you. From version 0.2 it keeps two settings you choose in the plays panel, what it shows on the video (outlines and names, outlines only, or clean) and the performance level (Full, Balanced or Light), in the extension's own storage in your browser; they are never sent anywhere, and go when you remove the extension. When you close the tab, the board is gone. From version 0.2, the plays panel lists the plays of the video in that tab, and holds any decklist you paste into it; both are kept only in the tab's memory and go when the tab closes or another video starts. A pasted decklist is read on your computer and sent nowhere. Your browser may keep the card list and the card images in its ordinary cache, as it does for any web page.</p>
+<h2>The permissions it asks for</h2>
+<div class="table"><table><thead><tr><th>Permission</th><th>Why</th></tr></thead><tbody><tr><td>Read and change data on <code>www.twitch.tv</code></td><td>To read the video frames and draw the overlay on the player</td></tr><tr><td><code>offscreen</code></td><td>To run the recognition engine in a hidden document of the extension, so it does not slow the page</td></tr><tr><td><code>sidePanel</code> (from version 0.2)</td><td>To show the plays panel, the plays and each player's side of the table, in the browser's side panel beside the page</td></tr><tr><td><code>storage</code> (from version 0.2)</td><td>To remember the two settings chosen in the panel (what it shows on the video, and the performance level), on your computer</td></tr><tr><td>Access to <code>content.publishing.riotgames.com</code> and <code>cmsassets.rgpub.io</code></td><td>To load the card names, types and images from Riot's public card gallery</td></tr></tbody></table></div>
+<p>The extension also makes its three fonts available to twitch.tv pages, for the overlay. A page could use them to tell that Wardeye is installed; they carry no information about you.</p>
+<h2>Builds from source</h2>
+<p>A developer building Wardeye from the repository can also run it in companion mode, where frames go to a program on the same computer (<code>http://127.0.0.1</code>). The Chrome Web Store version has no companion mode and no access to <code>127.0.0.1</code>.</p>
+<h2>Children</h2>
+<p>Wardeye is not directed at children, and it collects no data from anyone.</p>
+<h2>Changes</h2>
+<p>Changes to this policy are made in the public repository, where every version stays visible in its history, and are noted in the release notes.</p>
+<h2>Contact</h2>
+<p>Open an issue on the repository, or reach the Maintainer through the GitHub profile <a href="https://github.com/effe-exe">@effe-exe</a>. Security problems: see <a href="https://github.com/effe-exe/Wardeye/blob/main/SECURITY.md">SECURITY.md</a>.</p>
+</div></main>
+<footer><div class="wrap">
+<p>This page is the policy in <a href="https://github.com/effe-exe/Wardeye/blob/main/docs/PRIVACY.md">docs/PRIVACY.md</a>, where every version stays in the repository's history.</p>
+<p>Wardeye was created under Riot Games' "Legal Jibber Jabber" policy using assets owned by Riot Games. Riot Games does not endorse or sponsor this project.</p>
+</div></footer>
+</body>
+</html>
